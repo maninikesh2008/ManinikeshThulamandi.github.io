@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maninikesh Thulamandi | Senior Platform Engineer</title>
+    <style>
+        :root {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --accent: #38bdf8;
+            --border: #334155;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            padding: 2rem 1rem;
+        }
+
+        .container {
+            max-width: 850px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 3rem;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 2rem;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            letter-spacing: -0.05em;
+            margin-bottom: 0.5rem;
+        }
+
+        header p {
+            color: var(--accent);
+            font-size: 1.2rem;
+            font-weight: 500;
+            margin-bottom: 1rem;
+        }
+
+        .contact-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+            font-size: 0.95rem;
+        }
+
+        .contact-links a {
+            color: var(--text-muted);
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        .contact-links a:hover {
+            color: var(--accent);
+        }
+
+        section {
+            margin-bottom: 3rem;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            border-bottom: 2px solid var(--border);
+            padding-bottom: 0.5rem;
+            margin-bottom: 1.5rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--text-main);
+        }
+
+        .summary {
+            font-size: 1.1rem;
+            color: var(--text-muted);
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+            gap: 1rem;
+        }
+
+        .skill-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            padding: 1rem;
+            border-radius: 6px;
+        }
+
+        .skill-card h3 {
+            font-size: 0.95rem;
+            color: var(--accent);
+            margin-bottom: 0.5rem;
+            text-transform: uppercase;
+            letter-spacing: 0.02em;
+        }
+
+        .skill-card p {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+
+        .job {
+            margin-bottom: 2.5rem;
+        }
+
+        .job-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            margin-bottom: 0.75rem;
+        }
+
+        .job-title h3 {
+            font-size: 1.2rem;
+            font-weight: 700;
+        }
+
+        .job-title .company {
+            color: var(--accent);
+            font-weight: 600;
+        }
+
+        .job-meta {
+            text-align: right;
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+
+        .job-bullets {
+            list-style-type: none;
+        }
+
+        .job-bullets li {
+            position: relative;
+            padding-left: 1.25rem;
+            margin-bottom: 0.5rem;
+            font-size: 0.95rem;
+            color: var(--text-muted);
+        }
+
+        .job-bullets li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+        }
+
+        .cert-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 1rem;
+        }
+
+        .cert-card {
+            background: var(--card-bg);
+            border-left: 3px solid var(--accent);
+            padding: 1rem;
+            border-radius: 0 6px 6px 0;
+        }
+
+        .cert-card h3 {
+            font-size: 1rem;
+            margin-bottom: 0.25rem;
+        }
+
+        .cert-card p {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+
+        .edu-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 1rem;
+        }
+
+        .edu-name h3 {
+            font-size: 1.1rem;
+        }
+
+        .edu-name p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        .edu-date {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 5rem;
+            padding-top: 2rem;
+            border-top: 1px solid var(--border);
+            color: var(--text-muted);
+            font-size: 0.85rem;
+        }
+
+        @media (max-width: 600px) {
+            .job-header, .edu-item {
+                flex-direction: column;
+            }
+            .job-meta, .edu-date {
+                text-align: left;
+                margin-top: 0.25rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>Maninikesh Thulamandi</h1>
+        <p>Senior Platform Engineer</p>
+        <div class="contact-links">
+            <a href="tel:+15126607256">+1 (512) 660-7256</a>
+            <a href="mailto:maninikesh2008@gmail.com">maninikesh2008@gmail.com</a>
+            <a href="https://linkedin.com" target="_blank">LinkedIn Profile</a>
+        </div>
+    </header>
+
+    <section>
+        <h2>Summary</h2>
+        <p class="summary">
+            Senior Platform Engineer with over 10 years of experience designing, deploying, and automating hybrid cloud infrastructures on AWS, Azure, and GCP. Expertise in Infrastructure as Code with Terraform, managing AWS services (EC2, EKS, Lambda), and building GitOps pipelines using ArgoCD and GitHub Actions. Proven track record of standardizing Kubernetes deployments (GKE, OpenShift, Anthos) and mentoring cross-functional teams to improve platform reliability.
+        </p>
+    </section>
+
+    <section>
+        <h2>Technical Skills</h2>
+        <div class="skills-grid">
+            <div class="skill-card">
+                <h3>Cloud Platforms</h3>
+                <p>AWS Cloud, Azure Cloud, Google Cloud Platform, Pivotal Cloud Foundry, Tanzu Application Service.</p>
+            </div>
+            <div class="skill-card">
+                <h3>Containers & Orchestration</h3>
+                <p>Docker, Kubernetes, RedHat OpenShift, Tanzu Kubernetes Grid, Istio Service Mesh, Karpenter.</p>
+            </div>
+            <div class="skill-card">
+                <h3>IaC & GitOps</h3>
+                <p>Terraform, CloudFormation, Argo CD, FluxCD, GitHub Actions, Azure DevOps.</p>
+            </div>
+            <div class="skill-card">
+                <h3>Databases & Messaging</h3>
+                <p>Oracle, MySQL, Cassandra DB, Redis, AWS RDS, PostgreSQL, Aurora, RabbitMQ, Kafka.</p>
+            </div>
+            <div class="skill-card">
+                <h3>Monitoring & Observability</h3>
+                <p>Grafana, Prometheus, Splunk, ELK, CloudWatch, Tanzu Observability, Tempo.</p>
+            </div>
+            <div class="skill-card">
+                <h3>Languages & Scripting</h3>
+                <p>Java, Python, Shell scripting, PowerShell scripting.</p>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Work Experience</h2>
+
+        <div class="job">
+            <div class="job-header">
+                <div class="job-title">
+                    <h3>Cloud Platform Engineer</h3>
+                    <div class="company">Charles Schwab & Co</div>
+                </div>
+                <div class="job-meta">
+                    <div>Nov 2023 - Present</div>
+                    <div>Austin, TX</div>
+                </div>
+            </div>
+            <ul class="job-bullets">
+                <li>Engineered and maintained Anthos, Google Distributed Cloud for VMware, OpenShift Private vSphere, and Tanzu Application Services.</li>
+                <li>Standardized Kubernetes configuration management by implementing Config Sync across multi-cloud clusters.</li>
+                <li>Automated GDC GKE component deployments integrated with VMware infrastructure using GitHub Actions, reducing provisioning time by 30%.</li>
+                <li>Deployed and integrated Anthos Service Mesh & Mesh3 on OpenShift Platforms Kubernetes clusters.</li>
+                <li>Strengthened Kubernetes governance and compliance by implementing Policy Controller guardrails.</li>
+            </ul>
+        </div>
+
+        <div class="job">
+            <div class="job-header">
+                <div class="job-title">
+                    <h3>Cloud Platform Engineer (Hybrid Cloud)</h3>
+                    <div class="company">Hewlett Packard Inc.</div>
+                </div>
+                <div class="job-meta">
+                    <div>Apr 2021 - Oct 2023</div>
+                    <div>Austin, TX</div>
+                </div>
+            </div>
+            <ul class="job-bullets">
+                <li>Managed multi-domain and hybrid identity integrations across on-prem and cloud (Azure AD / AWS Managed AD).</li>
+                <li>Built production-grade Kubernetes clusters in AWS using Terraform, Helm, AWS EKS, and Karpenter.</li>
